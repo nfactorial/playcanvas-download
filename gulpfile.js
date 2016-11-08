@@ -144,18 +144,11 @@ var downloadPlayCanvasPackage = function(path, cb) {
     };
 
     const file = fs.createWriteStream('./' + CREDENTIALS.packageName);
-    var dataLength = 0;
-    var request = https.request(options, (response) => {
-        response.on('data', (data) => {
-            dataLength += data.length;
-            file.write(data);
-        });
-        response.on('end', () => {
-            file.end();
-            cb();
-        });
-    });
+    file.on('finish', cb);
 
+    var request = https.request(options, (response) => {
+        response.pipe(file);
+    });
     request.end();
 };
 
