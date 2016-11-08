@@ -1,0 +1,14 @@
+{
+  "name": "playcanvas-download",
+  "version": "0.0.1",
+  "description": "Simple gulpfile to download a package from PlayCanvas.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "nfactorial",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}

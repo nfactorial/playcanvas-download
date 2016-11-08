@@ -1,0 +1,15 @@
+#
+node_modules
+npm-debug.log
+
+# Mac cache information
+.DS_Store
+
+# WebStorm IDE settings are local only
+.idea/*
+
+# Do not store credentials in version control for security reasons
+.credentials.json
+
+# Do not version control zip files
+*.zip
